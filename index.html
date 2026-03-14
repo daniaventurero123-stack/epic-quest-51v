@@ -4369,6 +4369,8 @@
            FIN ESTILOS CÓDICE
            ============================================= */
         </style>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 </head>
 <body>
     <!-- Estrellas de fondo -->
@@ -12056,8 +12058,8 @@
         //   → Todos los métodos existen y tienen su firma correcta.
         //   → Para activar Firebase real:
         //       1. Incluir el SDK de Firebase en <head>:
-        //          <script src="https://www.gstatic.com/firebasejs/10.x.x/firebase-app-compat.js"></script>
-        //          <script src="https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore-compat.js"></script>
+        //          (script) firebase-app-compat.js    — https://www.gstatic.com/firebasejs/10.x.x/
+        //          (script) firebase-firestore-compat.js — https://www.gstatic.com/firebasejs/10.x.x/
         //       2. Llamar FirebaseSync.configure({ apiKey, authDomain, projectId }) con tus credenciales.
         //       3. El resto del sistema se conecta automáticamente.
         //
@@ -14960,6 +14962,11 @@
         };
 
         window.onload = () => init().catch(err => console.error('[init] Error crítico:', err));
+        FirebaseSync.configure({
+            apiKey: "AIzaSyC5hxU3O2Hxoh5maAw1AEfJJBUD-gnQ4GQ",
+            authDomain: "epic-quest-v50.firebaseapp.com",
+            projectId: "epic-quest-v50"
+        });
     
         // ========================================
         // FUNCIONES DEL PANEL DE ADMINISTRADOR
